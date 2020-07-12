@@ -1,4 +1,3 @@
-require('dotenv').config()
 var express=require("express");
 var app=express();
 var bodyParser = require('body-parser');
@@ -36,7 +35,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req,res,next){
 res.locals.currentUser=req.user;
 res.locals.error=req.flash("error");
-res.locals.success=req.flash("success");
+res.locals.success=req.flash("");
 next();
 });
 
@@ -70,6 +69,6 @@ app.use(campgroundRoutes);
 app.use(commentRoutes);
 app.use(indexRoutes);
 
-app.listen(3000,function(){
+app.listen(process.env.PORT ||3000,function(){
     console.log("yelpcamp server running");
 });
