@@ -1,3 +1,23 @@
+@media (max-width: 992px){
+    .navbar .navbar-header {
+        float: none;
+      }
+      .navbar .navbar-toggle {
+        display: block;
+      }
+      .navbar .navbar-collapse.collapse {
+        display: none!important;
+      }
+      .navbar .navbar-nav {
+        float: none!important;
+      }
+      .navbar .navbar-nav > li {
+        float: none;
+      }
+      .navbar .navbar-collapse.collapse.in {
+        display: block !important;
+      }
+}
 .thumbnail img{
     width:100%;
 }
